@@ -1,0 +1,76 @@
+ <!-- 21130440_NguyenThanhLuu_0866430732_DH21DTC
+          Nguyễn Thanh Lưu -->
+          <html lang="en">
+
+          <head>
+              <meta charset="UTF-8" />
+              <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+              <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+              <title>Game Ping Pong</title>
+              <link rel="stylesheet" href="./scss/style.css" />
+              <link rel="stylesheet" href="./font/icon/css/all.css" />
+          </head>
+          
+          <body>
+              <div class="wraper">
+                  <div class="titlegame">
+                      <h1>GAME PING PONG</h1>
+                  </div>
+          
+              
+          
+                  <div class="levelButtonContainer">
+                      <button id="levelButton">Level</button>
+                      
+                      <div id="levelList" class="levelListHidden">
+                          <ul id="levels">
+                              <li id="lv1"  class="levelButton" data-level="1"><button >Level 1</button></li>
+                              <li id="lv2"  class="levelButton" data-level="2"><button >Level 2</button></li>
+                              <li id="lv3" class="levelButton" data-level="3"><button >Level 3</button></li>
+                              <li id="lv4" class="levelButton" data-level="4"><button >Level 4</button></li>
+                              <li id="lv5" class="levelButton" data-level="5"><button >Level 5</button></li>
+                              <li id="lv6" class="levelButton" data-level="6"><button >Level 6</button></li>
+                          </ul>
+                      </div>
+                  </div>  
+          
+                  <div class="levelButtonContainer">
+                      <button id="levelButton">Thông tin cá nhân</button>
+                      
+                      <div id="levelList" class="levelListHidden">
+                          <ul id="levels">
+                              <li class="levelButton" ><button style="width: 300px;
+                                  font-size: 20px;" >Tên : Nguyễn Thanh Lưu</button></li>
+                              <li class="levelButton" ><button style="width: 300px;
+                                  font-size: 20px;">MSSV : 21130440</button></li>
+                              <li class="levelButton" ><button style="width: 300px;
+                                  font-size: 20px;">Lớp : DH21DTC</button></li>
+                          </ul>
+                      </div>
+                  </div>  
+          
+                  <div class="gamebox">
+                      <div class="gameplay">  
+                          <canvas id="gameview" width="1200" height="500"> </canvas>
+                          <!-- <div class="score-img">
+                              <img src="./img/score.svg" alt="" />
+                          </div> -->
+                          <i class="fas fa-flag">Level</i>
+                          <i class="fas fa-heart">Life</i>
+                          <i class="fas fa-star">Score</i>
+                          <button id="startButton">Bắt đầu</button>
+                          <div id="successMessage" style="display: none;">Thành công</div>
+                          <i id="stopButton" class="fas fa-solid fa-pause "></i>
+                          <i id="resumeButton" class="fas fa-solid fa-play" style="display: none;"></i>
+                          <div id="noti-game">
+                              <img src="./img/win.svg" alt="" id="noti-win" />
+                              <img src="./img/gameover.svg" alt="" id="noti-gameover" />
+                              <i id="play-again" class="fas fa-redo-alt">Play again</i>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </body>
+          <script src="./js/game.js"></script>
+          
+          </html>
