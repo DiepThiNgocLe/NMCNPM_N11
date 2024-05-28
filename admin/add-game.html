@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
 <head>
   <title>Thêm game | Quản trị Admin</title>
   <meta charset="utf-8">
@@ -133,23 +134,22 @@
   }
 </style>
 <!-- Navbar-->
+
+<!--1.addGame() nhấn vào nút "Thêm game mới" ở trang Quản lý game (data-game)-->
 <header class="app-header">
   <!-- Sidebar toggle button--><a class="app-sidebar__toggle" href="#" data-toggle="sidebar"
                                   aria-label="Hide Sidebar"></a>
   <!-- Navbar Right Menu-->
   <ul class="app-nav">
-
-
     <!-- User Menu-->
     <li><a class="app-nav__item" href="/main.html"><i class='bx bx-log-out bx-rotate-180'></i> </a>
-
     </li>
   </ul>
 </header>
 <!-- Sidebar menu-->
 <div class="app-sidebar__overlay" data-toggle="sidebar"></div>
 <aside class="app-sidebar">
-  <div class="app-sidebar__user"><img class="app-sidebar__user-avatar" src="/img/hay.jpg" width="50px"
+  <div class="app-sidebar__user"><img class="app-sidebar__user-avatar" src="/admin/img/hay.png" width="50px"
                                       alt="User Image">
     <div>
       <p class="app-sidebar__user-name"><b>Admin</b></p>
@@ -169,6 +169,7 @@
             đặt tài khoản</span></a></li>
   </ul>
 </aside>
+
 <main class="app-content">
   <div class="app-title">
     <ul class="app-breadcrumb breadcrumb">
@@ -176,18 +177,17 @@
       <li class="breadcrumb-item"><a href="#">Thêm game</a></li>
     </ul>
   </div>
+
+  <!--    2.requestAddGame() Trang Quản lý game gửi yêu cầu đến hệ thống để thêm game mới-->
+  <!--    3.Display result Hệ thống trả về kết quả cho trang Quản lý game-->
+  <!--    4.Display addGameUI trang Quản lý game hiển thị giao diện thêm game cho Admin-->
+  <!--    5.addGameInfor() Admin nhập các thông tin của game mới-->
   <div class="row">
     <div class="col-md-12">
       <div class="tile">
         <h3 class="tile-title">Tạo game mới</h3>
         <div class="tile-body">
-          <div class="row element-button">
-            <div class="col-sm-2">
-              <a class="btn btn-add btn-sm" data-toggle="modal" data-target="#exampleModalCenter"><i
-                      class="fas fa-folder-plus"></i> Thêm nhà cung cấp</a>
-            </div>
-          </div>
-          <form class="row">
+            <form class="row">
             <div class="form-group col-md-6">
               <label class="control-label">Mã game</label>
               <input class="form-control" type="text">
@@ -212,22 +212,7 @@
                 <option>Game 2 người</option>
               </select>
             </div>
-            <div class="form-group col-md-12">
-              <label class="control-label">Ảnh game</label>
-              <div id="myfileupload">
-                <input type="file" id="uploadfile" name="ImageUpload" onchange="readURL(this);"/>
-              </div>
-              <div id="thumbbox">
-                <img height="450" width="400" alt="Thumb image" id="thumbimage" style="display: none"/>
-                <a class="removeimg" href="javascript:"></a>
-              </div>
-              <div id="boxchoice">
-                <a href="javascript:" class="Choicefile"><i class="fas fa-cloud-upload-alt"></i> Chọn
-                  ảnh</a>
-                <p style="clear:both"></p>
-              </div>
 
-            </div>
             <div class="form-group col-md-12">
               <label class="control-label">Mô tả game</label>
               <textarea class="form-control" name="mota" id="mota"></textarea>
@@ -241,41 +226,12 @@
     </div>
   </div>
 </main>
-
-
-<!--
-MODAL CHỨC VỤ
--->
-<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
-     data-backdrop="static" data-keyboard="false">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
-
-      <div class="modal-body">
-        <div class="row">
-          <div class="form-group  col-md-12">
-              <span class="thong-tin-thanh-toan">
-                <h5>Thêm mới nhà cung cấp</h5>
-              </span>
-          </div>
-          <div class="form-group col-md-12">
-            <label class="control-label">Nhập tên chức vụ mới</label>
-            <input class="form-control" type="text" required>
-          </div>
-        </div>
-        <BR>
-        <button class="btn btn-save" type="button">Lưu lại</button>
-        <a class="btn btn-cancel" data-dismiss="modal" href="#">Hủy bỏ</a>
-        <BR>
-      </div>
-      <div class="modal-footer">
-      </div>
-    </div>
-  </div>
-</div>
-<!--
-MODAL
--->
+<!--6.requestAddGame() trang Quản lý game gửi yêu cầu thêm game đến hệ thống-->
+<!--7.checkInfor() Hệ thống kiểm tra lại thông tin game mới-->
+<!--8.addDB() sau đó sẽ thêm vào database-->
+<!--9.display result Gửi thông báo về trang Quản lý game-->
+<!--10.response result Hệ thống phản hồi kết quả về trang Quản lý game-->
+<!--11.display "Thêm trò chơi thành công" trang quản lý game hiển thị đến Admin thêm trò chơi thành công-->
 
 <script src="js/jquery-3.2.1.min.js"></script>
 <script src="js/popper.min.js"></script>
