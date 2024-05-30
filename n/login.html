@@ -10,7 +10,7 @@
 <h2>Sign in/up Form</h2>
 <div class="container" id="container">
     <div class="form-container sign-up-container">
-        <form action="#">
+        <form id="registerForm">
             <h1>Create Account</h1>
             <div class="social-container">
                 <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
@@ -18,14 +18,15 @@
                 <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
             </div>
             <span>or use your email for registration</span>
-            <input type="text" placeholder="Name" />
-            <input type="email" placeholder="Email" />
-            <input type="password" placeholder="Password" />
-            <button>Sign Up</button>
+            <input type="text" placeholder="Name" id="registerName" />
+            <input type="email" placeholder="Email" id="registerEmail" />
+            <input type="password" placeholder="Password" id="registerPassword" />
+            <button type="submit">Sign Up</button>
+            <p id="registerMessage" class="message"></p>
         </form>
     </div>
     <div class="form-container sign-in-container">
-        <form action="#">
+        <form id="loginForm">
             <h1>Sign in</h1>
             <div class="social-container">
                 <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
@@ -33,10 +34,11 @@
                 <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
             </div>
             <span>or use your account</span>
-            <input type="email" placeholder="Email" />
-            <input type="password" placeholder="Password" />
+            <input type="email" placeholder="Email" id="loginEmail" />
+            <input type="password" placeholder="Password" id="loginPassword" />
             <a href="#">Forgot your password?</a>
-            <button>Sign In</button>
+            <button type="submit">Sign In</button>
+            <p id="loginMessage" class="message"></p>
         </form>
     </div>
     <div class="overlay-container">
@@ -54,6 +56,6 @@
         </div>
     </div>
 </div>
-</body>
 <script src="js/login.js"></script>
+</body>
 </html>

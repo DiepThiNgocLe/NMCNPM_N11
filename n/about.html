@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image slider</title>
+
+  <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/about.css" />
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body style="background-color: #000;">
+  
+
+     <!-- Navigation-->
+     <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container px-4 px-lg-5">
+          <a class="navbar-brand" href="./index.html">GAME MINI</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                  <li class="nav-item"><a class="nav-link active" aria-current="page" href="./index.html">Game</a></li>
+                  <li class="nav-item"><a class="nav-link" href="./about.html">About</a></li>
+                  <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Thành tích</a>
+                      <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <li><a class="dropdown-item" href="#!">Xếp hạng</a></li>
+                          <li><hr class="dropdown-divider" /></li>
+                          <li><a class="dropdown-item" href="#!">Game hot</a></li>
+                          <li><a class="dropdown-item" href="#!">Thể loại game</a></li>
+                      </ul>
+                  </li>
+              </ul>
+             
+              <form class="d-flex">
+                  <div  id="authButtons">
+                  <div class="text-center"><a id="signInLink" class="btn btn-outline-dark mt-auto" style="margin-right: 10px" href="login.html">Sign in</a></div>
+                  <div class="text-center"><a id="signUpLink" class="btn btn-outline-dark mt-auto" href="login.html">Log in</a></div>
+              </div>
+                  <div id="userProfile" style="display:none;">
+                      <img id="userAvatar" src="" alt="User Avatar" class="rounded-circle" style="width: 50px; height: 50px;">
+                      <h2 id="userName" style="margin: 0 10px;"></h2>
+                      <button id="logoutButton" class="btn btn-outline-dark">Logout</button>
+                  </div>
+              </form>
+          </div>
+      </div>
+  </nav>
+
+    <div style="--total: 4;" class="circle-wrapper">
+      <div class="center-element">Nhóm 11</div>
+  
+      <input type="radio" name="radio-avatar" id="radio-avatar-1">
+      <label id="avatar-1" for="radio-avatar-1" class="avatar" style="--i:1">
+        <img src="./img/about/luuIdol.jpg" alt="Steven Robinson">
+        <svg viewBox="0 0 300 300">
+          <text fill="currentColor">
+            <textPath xlink:href="#circlePath">Nguyễn Thanh Lưu - 21130440</textPath>
+          </text>
+        </svg>
+      </label>
+  
+      <input type="radio" name="radio-avatar" id="radio-avatar-2">
+      <label id="avatar-2" for="radio-avatar-2" class="avatar" style="--i:2">
+        <img src="./img/about/diep.jpg" alt="Mari Johnson">
+        <svg viewBox="0 0 300 300">
+          <text fill="currentColor">
+            <textPath xlink:href="#circlePath">Lê Thị Ngọc Diệp - 21130315</textPath>
+          </text>
+        </svg>
+      </label>
+  
+      <input type="radio" name="radio-avatar" id="radio-avatar-3">
+      <label id="avatar-3" for="radio-avatar-3" class="avatar" style="--i:3">
+        <img src="./img/imgpikachu/th2.jpg" alt="Bob">
+        <svg viewBox="0 0 300 300">
+          <text fill="currentColor">
+            <textPath xlink:href="#circlePath">Trần Văn Hà - 21130341</textPath>
+          </text>
+        </svg>
+      </label>
+  
+      <input type="radio" name="radio-avatar" id="radio-avatar-4">
+      <label id="avatar-4" for="radio-avatar-4" class="avatar" style="--i:4">
+        <img src="./img/about/nhat.jpg" alt="Susan Williams">
+        <svg viewBox="0 0 300 300">
+          <text fill="currentColor">
+            <textPath xlink:href="#circlePath">Vũ Hoàng Nhật - 21130464</textPath>
+          </text>
+        </svg>
+      </label>
+  
+  
+  
+    </div>
+    
+     <p class="absolute bottom-4 right-4 text-white mt-4 text-sm">Lưu-Idol <a href="https://www.facebook.com/profile.php?id=100027501039287" class="text-orange-500 hover:underline" target="_parent">Facebook Me</a>?
+  
+    <!-- SVG template for dynamic text -->
+    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 300 300" width="0" height="0">
+      <defs>
+        <path id="circlePath" d="M 150, 150 m -100, 0 a 100,100 0 0,1 200,0 a 100,100 0 0,1 -200,0" />
+      </defs>
+    </svg>
+  <script src="./js/about.js"></script>
+</body>
+</html>
